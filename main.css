@@ -1,0 +1,29 @@
+/*Стиль основных элементов страницы*/
+body {
+	width: 100%;
+	border:0px;
+	padding:0px;
+	margin:0px;
+}
+xml{
+	font-size:14pt;
+	text-align:center;
+	background:#fff;
+}
+
+xml,audio,#help, footer{
+	width:900px;
+	margin: 0 auto;
+	display:block;
+}
+#help,footer{
+	color:#555;
+	text-align:center;
+}
+footer{
+	width:100%;
+	background:#eee;
+	margin-top: 1em;
+	padding-top: 3em;
+	padding-bottom: 3em;
+}

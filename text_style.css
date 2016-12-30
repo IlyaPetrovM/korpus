@@ -1,10 +1,31 @@
 ﻿/*Стиль для текстов и перевода, хранящихся в XML*/
+interlinear-text{
+	display:inline-block;
+	text-align:left;
+}
+paragraph {
+	display:block;
+	float:clear;
+	margin: 15px 0px 0 0px;
+}
+item[type="title"]{ /*Название для отрывка*/
+	display:block;
+	font-size: 30pt;
+	margin: 20px 0 0 20px;
+}
 
+word > item[type="segnum"]{ /*Нумерация параграфов*/
+	display:none;
+}
+
+words{
+	display:block;
+}
 words morphemes {
-        display: none;
-        position: absolute;
-        top: 100%;
-      }
+	display: none;
+	position: absolute;
+	top: 100%;
+}
 	  words word:hover > item{
 		  color: red;
 	  }
@@ -16,10 +37,8 @@ words word:hover morphemes {
 	border: 1px gray solid;
 	z-index: 100;
 }
-words{
-display:block;
-}
-words, words morphemes {
+words, 
+words morphemes {
 	margin: 0;
 	padding: 0;
 }
@@ -29,64 +48,22 @@ words word {
 	position: relative;
 	margin-right:3pt;
 }
-words morphemes morph { float: none; }
+words morphemes morph { 
+	float: none; 
+}
 words morphemes morph:hover{
 	color: green;
 }
-
-paragraph {
-	display:block;
-	float:clear;
-	margin: 15px 0px 0 0px;
-}
-
-
-
 phrases > word > item[type="gls"]{ /*Перевод*/
 	display:block;
 	float:clear;
 	color:red;
 }
-item[type="pos"]{
-	display:none;
+words > word > item[type="pos"],
+words > word > item[type="gls"],
+morph>item{
+	display: none;
 }
-word > item[type="segnum"]{
-	display:none;
-}
-item[type="title"]{
+morph>item[type="gls"]{
 	display:block;
-	font-size: 30pt;
-	margin: 20px 0 0 20px;
-}
-body {
-	width: 100%;
-	border:0px;
-	padding:0px;
-	margin:0px;
-}
-xml{
-	font-size:14pt;
-	text-align:center;
-	background:#fff;
-}
-interlinear-text{
-	display:inline-block;
-	text-align:left;
-}
-
-xml,audio,#help, footer{
-	width:900px;
-	margin: 0 auto;
-	display:block;
-}
-#help,footer{
-	color:#555;
-	text-align:center;
-}
-footer{
-	width:100%;
-	background:#eee;
-	margin-top: 1em;
-	padding-top: 3em;
-	padding-bottom: 3em;
 }
